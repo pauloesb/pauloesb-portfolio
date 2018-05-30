@@ -43,3 +43,10 @@ puts "[Input Seed Data] - 8 Portfolio items created for Ruby on Rails!"
   )
 end
 puts "[Input Seed Data] - 1 Portfolio item created for Angular!"
+
+3.times do |technology|
+  Portfolio.last.technologies.create!(
+    name: "Technology #{technology}",
+  )
+end
+puts "[Input Seed Data] - 3 Technology items created!"
