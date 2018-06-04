@@ -15,4 +15,8 @@ module ApplicationHelper
       content_tag(:p, greeting, class: "source-greeting")
     end
   end
+
+  def set_copyright
+    "<p>&copy; #{Time.now.year} | <b>Paulo Borba</b> All rights reserved</p>".html_safe
+  end
 end
