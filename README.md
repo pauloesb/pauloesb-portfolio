@@ -1,6 +1,6 @@
 # Paulo Borba's Portfolio
 
-Ruby version - 2.5.1   
+Ruby version - 2.4.1   
 Rails version - 5.0.7   
 
 This portfolio was developed through the course "Dissecting Ruby on Rails 5 - Become a Professional Developer" (https://bit.ly/2KtaTqm).
