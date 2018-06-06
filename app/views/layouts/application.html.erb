@@ -14,17 +14,20 @@
   </head>
 
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
+    <div class="site-wrapper">
+      <div class="site-wrapper-inner">
+        <div class="cover-container">
+          <%= render "shared/nav" %>
 
-    <%= render "shared/nav" %>
+          <%= login_helper %>
 
-    <%= login_helper %>
+          <%= yield %>
 
-    <%= yield %>
+          <%= set_copyright %>
 
-    <%= set_copyright %>
-
-    <%= source_helper %>
+          <%= source_helper %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
