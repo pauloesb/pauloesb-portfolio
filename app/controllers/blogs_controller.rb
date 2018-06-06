@@ -5,6 +5,7 @@ class BlogsController < ApplicationController
 
   def index
     @blogs = Blog.all
+    @page_title = "Paulo Borba's Blog"
   end
 
   def show
