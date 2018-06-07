@@ -43,7 +43,7 @@ module ApplicationHelper
     end
   end
 
-  def set_copyright
-    "<p>&copy; #{Time.now.year} | <b>Paulo Borba</b> All rights reserved</p>".html_safe
+  def set_copyright style = ""
+    "<p class='#{style}'>&copy; #{Time.now.year} | <b>Paulo Borba</b> All rights reserved</p>".html_safe
   end
 end
