@@ -12,6 +12,7 @@
         <%= link_to 'Back', blogs_path %>
         <%= link_to 'Edit', edit_blog_path(@blog) if logged_in? :site_admin %> |
       </div>
+      <%= render "shared/blog_sidebar" %>
     </div>
   </div>
 </article>
