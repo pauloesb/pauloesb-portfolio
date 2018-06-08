@@ -28,14 +28,14 @@
   </div>
 </nav>
 
-<header class="masthead">
+<header class="masthead" style="background-image: url(<%= asset_path local_assigns[:img_bg]%>)">
   <div class="overlay"></div>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
-          <h1>Development Diary</h1>
-          <span class="subheading">Paulo's Dev Blog</span>
+          <h1><%= local_assigns[:title] %></h1>
+          <h2 class="subheading"><%= local_assigns[:subtitle] %></h2>
         </div>
       </div>
     </div>
