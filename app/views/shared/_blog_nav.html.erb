@@ -35,8 +35,8 @@
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="<%= local_assigns[:head] %>">
           <h1><%= local_assigns[:title] %></h1>
-          <h2 class="subheading"><%= local_assigns[:subtitle] %></h2>
-          <span class="meta"><%= local_assigns[:created_at] unless local_assigns[:created_at].nil? %></span>
+          <%= show_subtitle local_assigns[:subtitle] %>
+          <%= show_published_time local_assigns[:created_at] %>
         </div>
       </div>
     </div>

@@ -8,7 +8,7 @@ puts "[Input Seed Data] - 3 Topics created!"
 10.times do |blog|
   Blog.create!(
       title: "My Blog Post #{blog}",
-      body: Faker::Lorem.paragraph(1),
+      body: Faker::Lorem.paragraph(50),
       topic_id: Topic.last.id
   )
 end
