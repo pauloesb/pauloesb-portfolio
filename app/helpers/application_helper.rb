@@ -18,7 +18,7 @@ module ApplicationHelper
 
   def logout_ctag style, ctag
     if ctag
-      content_tag(:li, login_link(style), class: "nav-item")
+      content_tag(:li, logout_link(style), class: "nav-item")
     else
       logout_link style
     end
