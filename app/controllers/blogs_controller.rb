@@ -4,7 +4,7 @@ class BlogsController < ApplicationController
   layout "blog"
 
   def index
-    @blogs = Blog.all
+    @blogs = Blog.all.page(params[:page]).per(4)
     @page_title = "Paulo Borba's Blog"
   end
 
