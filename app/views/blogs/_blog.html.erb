@@ -1,7 +1,7 @@
 <div class="post-preview">
   <%= link_to blog do %>
     <h2 class="post-title"><%= blog.title %></h2>
-    <h3 class="post-subtitle"><%= blog.body %></h3>
+    <h3 class="post-subtitle"><%= blog.subtitle %></h3>
   <% end %>
   <p class="post-meta"><%= blog_published_time blog.created_at %></p>
 </div>
