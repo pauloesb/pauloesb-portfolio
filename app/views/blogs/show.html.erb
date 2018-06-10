@@ -2,15 +2,15 @@
   img_bg: "http://placehold.it/2300x2000",
   head: "post-heading",
   title: @blog.title,
-  created_at: @blog.created_at %>
+  created_at: @blog.updated_at %>
 
 <article>
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <p><%= @blog.body %></p>
-        <%= link_to 'Back', blogs_path %>
-        <%= link_to 'Edit', edit_blog_path(@blog) if logged_in? :site_admin %> |
+        <%= back_btn %> |
+        <%= edit_btn @blog %>
       </div>
       <%= render "shared/blog_sidebar" %>
     </div>

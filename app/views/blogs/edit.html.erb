@@ -1,6 +1,19 @@
-<h1>Editing Blog</h1>
+<%= render "shared/blog_nav",
+  head: "site-heading",
+  title: "Editing Blog",
+  subtitle: @blog.title %>
 
-<%= render 'form', blog: @blog %>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-10 mx-auto">
+        <%= render 'form', blog: @blog %>
+        <%= back_btn %> |
+        <%= show_btn @blog %>
+      </div>
+      <%= render "shared/blog_sidebar" %>
+    </div>
+  </div>
+</article>
 
-<%= link_to 'Show', @blog %> |
-<%= link_to 'Back', blogs_path %>
+<hr>

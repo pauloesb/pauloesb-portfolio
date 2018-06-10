@@ -1,5 +1,17 @@
-<h1>New Blog</h1>
+<%= render "shared/blog_nav",
+  head: "site-heading",
+  title: "New Post" %>
 
-<%= render 'form', blog: @blog %>
+<article>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 offset-lg-3 col-md-10 mx-auto">
+        <%= render 'form', blog: @blog %>
+        <%= link_to 'Back', blogs_path %>
+      </div>
+      <%= render "shared/blog_sidebar" %>
+    </div>
+  </div>
+</article>
 
-<%= link_to 'Back', blogs_path %>
+<hr>
