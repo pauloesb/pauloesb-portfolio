@@ -14,20 +14,14 @@
   </head>
 
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container">
-          <%= render "shared/nav" %>
 
-          <%= login_helper %>
+    <%= render 'shared/portfolios_navbar' %>
 
-          <%= yield %>
+    <main role="main">
+    <%= yield %>
+    </main>
 
-          <%= set_copyright %>
+    <%= render 'shared/portfolio_footer' %>
 
-          <%= source_helper %>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
