@@ -72,4 +72,13 @@ module ApplicationHelper
   def active? path
     "active" if current_page? path
   end
+
+  def video_background
+    video_tag 'home_bg_video.mp4',
+      id: 'background',
+      autoplay: true,
+      loop: true,
+      muted: true,
+      poster: 'home_bg.jpg'
+  end
 end
