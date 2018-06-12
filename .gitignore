@@ -19,5 +19,8 @@
 # Ignore public folder.
 /public/*
 
+# Ignote .env
+.env
+
 # Hidden secrets
 /config/secrets.yml
