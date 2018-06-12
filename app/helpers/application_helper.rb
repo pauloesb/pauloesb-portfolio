@@ -1,26 +1,11 @@
 module ApplicationHelper
-  def login_helper style = "", ctag = false
+  def login_helper style = "", nl = false
     if current_user.is_a?(GuestUser)
-      login_ctag style, ctag
+      login_link(style) +
+        ("<br>".html_safe if nl) +
+        register_link(style)
     else
-      logout_ctag style, ctag
-    end
-  end
-
-  def login_ctag style, ctag
-    if ctag
-      content_tag(:li, register_link(style), class: "nav-item") +
-        content_tag(:li, login_link(style), class: "nav-item")
-    else
-      register_link(style) + login_link(style)
-    end
-  end
-
-  def logout_ctag style, ctag
-    if ctag
-      content_tag(:li, logout_link(style), class: "nav-item")
-    else
-      logout_link style
+      logout_link(style)
     end
   end
 
