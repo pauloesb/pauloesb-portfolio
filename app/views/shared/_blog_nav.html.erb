@@ -2,26 +2,12 @@
   <div class="container">
     <a class="navbar-brand" href="index.html">Paulo Borba</a>
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      Menu
+      Explore
       <i class="fa fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "About me", about_me_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Contact", contact_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Blog", blogs_path, class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Portfolio", portfolios_path, class: "nav-link" %>
-        </li>
+        <%= nav_helper tag_type: 'li', tag_style: 'nav-item', link_style: 'text-white' %>
         <li class="nav-item">
           <%= login_link "text-white" if current_user.is_a?(GuestUser)  %>
         </li>
