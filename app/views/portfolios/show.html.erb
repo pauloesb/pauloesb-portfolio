@@ -18,7 +18,8 @@
         <p><%= t.name %></p>
       <% end %>
       <hr>
-      <%= link_to "View All Portfolio Items", portfolios_path %>
+      <%= link_to "Return", portfolios_path %> |
+      <%= link_to "Edit", edit_portfolio_path(@portfolio_item) %>
     </div>
   </div>
 </div>
