@@ -18,5 +18,4 @@
 //= require turbolinks
 //= require html5sortable
 //= require bootstrap-filestyle
-//= require jquery.infinite-pages
 //= require_tree .
