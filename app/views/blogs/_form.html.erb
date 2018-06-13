@@ -19,6 +19,29 @@
     <%= f.text_area :body, class: "form-control", rows: 12 %>
   </div>
 
+  <hr>
+
+  <div class="form-group">
+    <h5>Post status</h5>
+    <div class="row">
+      <div class="col-md-1">
+        <%= f.radio_button :status, "draft", checked: blog.draft? %>
+      </div>
+      <div class="col-md-1 radio-btn-text">
+        <h6>Draft</h6>
+      </div>
+      <div class="col-md-4"></div>
+      <div class="col-md-1">
+        <%= f.radio_button :status, "published", checked: blog.published? %>
+      </div>
+      <div class="col-md-1 radio-btn-text">
+        <h6>Published</h6>
+      </div>
+    </div>
+  </div>
+
+  <hr>
+
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
