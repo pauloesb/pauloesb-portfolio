@@ -19,4 +19,5 @@
 //= require html5sortable
 //= require bootstrap-filestyle
 //= require cocoon
+//= require gritter
 //= require_tree .
