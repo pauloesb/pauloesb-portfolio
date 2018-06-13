@@ -18,4 +18,5 @@
 //= require turbolinks
 //= require html5sortable
 //= require bootstrap-filestyle
+//= require cocoon
 //= require_tree .

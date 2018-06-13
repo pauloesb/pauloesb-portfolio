@@ -1,5 +1,6 @@
 @import "bootstrap";
 @import "jquery-ui";
+@import "font-awesome";
 
 :root {
   --jumbotron-padding-y: 3rem;
@@ -44,4 +45,12 @@ footer p {
 
 .portfolio-container {
   padding: 30px;
+}
+
+span.fa-stack > .fa {
+  text-decoration: none;
+}
+
+.rem-btn {
+  color: red;
 }
