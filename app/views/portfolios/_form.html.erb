@@ -11,11 +11,11 @@
       </div>
       <div class="form-group">
         <label>Load <%= f.label :main_image %> file</label>
-          <%= f.file_field :main_image, class: "filestyle" %>
+        <%= f.file_field :main_image, class: "filestyle" %>
       </div>
       <div class="form-group">
         <label>Load <%= f.label :thumb_image %> file</label>
-          <%= f.file_field :thumb_image, class: "filestyle"%>
+        <%= f.file_field :thumb_image, class: "filestyle"%>
       </div>
     </div>
     <div class="col-md-6">
@@ -44,4 +44,8 @@
       <%= f.submit "Save Portfolio Item", class: "btn btn-primary btn-block my-2" %>
     </div>
   </div>
+
+  <script type="text/javascript">
+    $('.filestyle').filestyle();
+  </script>
 <% end %>
