@@ -4,7 +4,11 @@ class BlogsController < ApplicationController
   layout "blog"
 
   def index
-    @blogs = Blog.all.page(params[:page]).per(4)
+    if logged_in? :site_admin
+      @blogs = Blog.recent.page(params[:page]).per(4)
+    else
+      @blogs = Blog.published.recent.page(params[:page]).per(4)
+    end
     @page_title = "Paulo Borba's Blog"
   end
 
@@ -60,13 +64,13 @@ class BlogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_blog
-      @blog = Blog.friendly.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_blog
+    @blog = Blog.friendly.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def blog_params
-      params.require(:blog).permit(:title, :subtitle, :body, :status)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def blog_params
+    params.require(:blog).permit(:title, :subtitle, :body, :status)
+  end
 end
