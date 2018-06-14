@@ -1,6 +1,7 @@
 <div class="post-preview">
   <%= link_to blog do %>
     <h2 class="post-title"><%= blog.title %></h2>
+    <%= render partial: "blogs/admin_actions", locals: {blog: blog} %>
     <h3 class="post-subtitle"><%= blog.subtitle %></h3>
   <% end %>
   <p class="post-meta"><%= blog_published_time blog.updated_at %></p>

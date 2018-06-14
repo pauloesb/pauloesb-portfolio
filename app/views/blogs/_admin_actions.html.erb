@@ -1,0 +1,7 @@
+<% if logged_in? :site_admin %>
+  <nav class="breadcrumb">
+    <span class="breadcrumb-item"><%= breadcrumb_edit_icon blog %></span>
+    <span class="breadcrumb-item"></span>
+    <span class="breadcrumb-item"><%= breadcrumb_delete_icon blog %></span>
+  </nav>
+<% end %>

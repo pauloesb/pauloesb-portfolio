@@ -3,15 +3,15 @@ module PortfoliosHelper
     "sortable" if logged_in? :site_admin
   end
 
-  def back_btn
+  def portfolio_back_btn
     link_to "Return", portfolios_path
   end
 
-  def edit_btn item
+  def portfolio_edit_btn item
     link_to "Edit", edit_portfolio_path(item) if logged_in?(:site_admin)
   end
 
-  def delete_btn item
+  def portfolio_delete_btn item
     link_to "Delete",
       item,
       method: :delete,

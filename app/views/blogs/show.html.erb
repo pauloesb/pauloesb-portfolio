@@ -21,10 +21,19 @@
             <span>
         </nav>
 
+        <% if logged_in? :site_admin %>
+          <span><strong>Status:</strong> <%= @blog.status %></span>
+        <% end %>
+
         <p><%= markdown @blog.body %></p>
-        <%= back_btn %>
-        <%= edit_btn @blog %>
-        <%= delete_btn @blog %>
+
+        <nav class="breadcrumb">
+          <h5 class="breadcrumb-item"><%= blog_back_btn %></h5>
+          <% if logged_in? :site_admin %>
+            <h5 class="breadcrumb-item"><%= blog_edit_btn @blog %></h5>
+            <h5 class="breadcrumb-item"><%= blog_delete_btn @blog %></h5>
+          <% end %>
+        </nav>
       </div>
       <%= render "shared/blog_sidebar" %>
     </div>

@@ -26,19 +26,19 @@ module BlogsHelper
     asset_path img unless img.nil?
   end
 
-  def back_btn
-    link_to "Back", blogs_path, class: "btn btn-link"
+  def blog_back_btn
+    link_to "Back", blogs_path, class: "link-item"
   end
 
-  def edit_btn blog
-    link_to "Edit", edit_blog_path(blog), class: "btn btn-link" if logged_in? :site_admin
+  def blog_edit_btn blog
+    link_to "Edit", edit_blog_path(blog), class: "link-item" if logged_in? :site_admin
   end
 
-  def show_btn blog
-    link_to "Show", blog, class: "btn btn-link"
+  def blog_show_btn blog
+    link_to "Show", blog, class: "link-item"
   end
 
-  def delete_btn blog
+  def blog_delete_btn blog
     link_to "Delete",
       blog,
       method: :delete,
@@ -48,7 +48,7 @@ module BlogsHelper
         commit: 'Yes',
         cancel: 'No'
       },
-      class: "btn btn-link" if logged_in? :site_admin
+      class: "link-item" if logged_in? :site_admin
   end
 
   def breadcrumb_edit_icon blog
