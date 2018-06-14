@@ -16,8 +16,8 @@
           <h5 class="breadcrumb-item active"><%= @blog.title %></h5>
 
           <span class="breadcrumb-icons">
-            <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog), class: "link-item" if logged_in? :site_admin %>
-            <%= link_to fa_icon('trash'), @blog, method: :delete, class: "link-item" if logged_in? :site_admin %>
+            <%= breadcrumb_edit_icon @blog %>
+            <%= breadcrumb_delete_icon @blog %>
             <span>
         </nav>
 

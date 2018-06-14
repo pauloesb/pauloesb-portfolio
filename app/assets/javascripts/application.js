@@ -20,4 +20,5 @@
 //= require bootstrap-filestyle
 //= require cocoon
 //= require gritter
+//= require data-confirm-modal
 //= require_tree .

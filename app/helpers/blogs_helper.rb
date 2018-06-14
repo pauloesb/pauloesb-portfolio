@@ -39,7 +39,35 @@ module BlogsHelper
   end
 
   def delete_btn blog
-    link_to "Delete", blog, method: :delete, class: "btn btn-link" if logged_in? :site_admin
+    link_to "Delete",
+      blog,
+      method: :delete,
+      data: {
+        title: 'Delete Post Confirmation',
+        confirm: 'Do you want to delete your post?',
+        commit: 'Yes',
+        cancel: 'No'
+      },
+      class: "btn btn-link" if logged_in? :site_admin
+  end
+
+  def breadcrumb_edit_icon blog
+    link_to fa_icon('pencil-square-o'),
+      edit_blog_path(blog),
+      class: "link-item" if logged_in? :site_admin
+  end
+
+  def breadcrumb_delete_icon blog
+    link_to fa_icon('trash'),
+      blog,
+      method: :delete,
+      data: {
+        title: 'Delete Post Confirmation',
+        confirm: 'Do you want to delete your post?',
+        commit: 'Yes',
+        cancel: 'No'
+      },
+      class: "link-item" if logged_in? :site_admin
   end
 
   def blog_topic_id blog
