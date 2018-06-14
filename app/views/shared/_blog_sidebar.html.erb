@@ -6,7 +6,10 @@
     <p>My name is Paulo Borba, and this is my personal blog, where I post some tech tips, some personal/professional histories and the development of my personal projects.</p>
   </div>
   <div class="sidebar-module">
-    <br>
+    <h4>Blog's Topics</h4>
+    <%= render partial: "topics/topic", collection: topics %>
+    </div>
+  <div class="sidebar-module">
     <h4>Social Media</h4>
     <br>
     <ul class="list-inline text-center">

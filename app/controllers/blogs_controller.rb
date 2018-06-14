@@ -1,5 +1,6 @@
 class BlogsController < ApplicationController
   before_action :set_blog, only: [:show, :edit, :update, :destroy, :toggle_status]
+  before_action :set_topics, only: [:index, :show, :edit, :new]
   access all: [:show, :index], user: {except: [:destroy, :new, :create, :update, :edit, :toggle_status]}, site_admin: :all
   layout "blog"
 
@@ -9,6 +10,7 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.published.recent.page(params[:page]).per(4)
     end
+    @topics = Topic.all
     @page_title = "Paulo Borba's Blog"
   end
 
@@ -71,6 +73,10 @@ class BlogsController < ApplicationController
   # Use callbacks to share common setup or constraints between actions.
   def set_blog
     @blog = Blog.friendly.find(params[:id])
+  end
+
+  def set_topics
+    @topics = Topic.all
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
