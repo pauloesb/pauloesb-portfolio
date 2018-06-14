@@ -38,6 +38,10 @@ module BlogsHelper
     link_to "Show", blog, class: "btn btn-link"
   end
 
+  def delete_btn blog
+    link_to "Delete", blog, method: :delete, class: "btn btn-link" if logged_in? :site_admin
+  end
+
   def blog_topic_id blog
     if blog.topic
       blog.topic.id

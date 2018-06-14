@@ -16,14 +16,15 @@
           <h5 class="breadcrumb-item active"><%= @blog.title %></h5>
 
           <span class="breadcrumb-icons">
-            <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog), class: "link-item" if logged_in? :site_admin %> | 
+            <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog), class: "link-item" if logged_in? :site_admin %>
             <%= link_to fa_icon('trash'), @blog, method: :delete, class: "link-item" if logged_in? :site_admin %>
             <span>
         </nav>
 
         <p><%= markdown @blog.body %></p>
-        <%= back_btn %> |
+        <%= back_btn %>
         <%= edit_btn @blog %>
+        <%= delete_btn @blog %>
       </div>
       <%= render "shared/blog_sidebar" %>
     </div>
