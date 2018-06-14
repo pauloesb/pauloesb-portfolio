@@ -134,12 +134,13 @@ body {
 }
 
 div.about-me {
+  margin-left: 60px;
   text-align: justify;
   text-justify: inter-word;
 }
 
-div.about-me-page {
-  padding: 40px;
+div.about-me-page > h1 {
+  text-align: center;
 }
 
 #background {
@@ -159,4 +160,12 @@ div.about-me-page {
 
 .app-footer {
   color: white;
+}
+
+.app-card-container > .card {
+  padding: 20px
+}
+
+.profile-img {
+  border: 1px solid grey;
 }
