@@ -1,0 +1,11 @@
+// Append new data
+$("<%=j render @blogs %>")
+  .appendTo($(".infinite-table"));
+
+// Update pagination link
+<% if @blogs.last_page? %>
+    $('.pagination').html("<h6 class='btn btn-link'>End</h6>");
+<% else %>
+  $('.pagination')
+    .html("<%=j link_to_next_page(@blogs, 'Load older posts...', remote: true, class: 'btn btn-link') %>");
+<% end %>

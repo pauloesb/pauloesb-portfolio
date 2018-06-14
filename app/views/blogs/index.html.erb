@@ -9,7 +9,7 @@
     <div class="col-lg-7 col-md-10 mx-auto infinite-table">
       <%= render @blogs %>
     </div>
-    <%= render "shared/blog_sidebar", topics: @topics %>
+    <%= render "shared/blog_sidebar" %>
   </div>
   <div class="pagination pgn-style">
     <%= link_to_next_page(@blogs, 'Load older post...', remote: true, class: 'btn btn-link') %>

@@ -2,7 +2,7 @@ class TopicsController < ApplicationController
   layout "blog"
 
   def show
-    @topics = Topic.all
+    @topics = Topic.with_blogs
     @topic = Topic.find(params[:id])
 
     if logged_in? :site_admin

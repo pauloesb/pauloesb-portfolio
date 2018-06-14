@@ -76,7 +76,7 @@ class BlogsController < ApplicationController
   end
 
   def set_topics
-    @topics = Topic.all
+    @topics = Topic.with_blogs
   end
 
   # Never trust parameters from the scary internet, only allow the white list through.
