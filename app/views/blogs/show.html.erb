@@ -10,6 +10,17 @@
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
+        <nav class="breadcrumb">
+          <h5 class="breadcrumb-item"><%= link_to "Home", root_path, class: "link-item" %></h5>
+          <h5 class="breadcrumb-item"><%= link_to @blog.topic.title, topic_path(@blog.topic), class: "link-item" %></h5>
+          <h5 class="breadcrumb-item active"><%= @blog.title %></h5>
+
+          <span class="breadcrumb-icons">
+            <%= link_to fa_icon('pencil-square-o'), edit_blog_path(@blog), class: "link-item" if logged_in? :site_admin %> | 
+            <%= link_to fa_icon('trash'), @blog, method: :delete, class: "link-item" if logged_in? :site_admin %>
+            <span>
+        </nav>
+
         <p><%= markdown @blog.body %></p>
         <%= back_btn %> |
         <%= edit_btn @blog %>
