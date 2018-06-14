@@ -6,17 +6,30 @@
   <% end %>
   <div class="form-group">
     <h5><%= f.label :title %></h5>
-    <%= f.text_field :title, class: "form-control" %>
+    <%= f.text_field :title, class: "form-control", placeholder: "Title" %>
   </div>
 
   <div class="form-group">
     <h5><%= f.label :subtitle %></h5>
-    <%= f.text_area :subtitle, class: "form-control", rows: 3 %>
+    <%= f.text_area :subtitle, class: "form-control", rows: 3, placeholder: "Subtitle" %>
+  </div>
+
+  <div class="form-group">
+    <h5><%= f.label :topic_id %></h5>
+    <%= f.collection_select(
+      :topic_id,
+      Topic.all,
+      :id, :title,
+      {
+      selected: blog.topic.id,
+      include_blank: true
+      },
+      class: 'form-control') %>
   </div>
 
   <div class="form-group">
     <h5><%= f.label :body %></h5>
-    <%= f.text_area :body, class: "form-control", rows: 12 %>
+    <%= f.text_area :body, class: "form-control", rows: 12, placeholder: "Body" %>
   </div>
 
   <hr>

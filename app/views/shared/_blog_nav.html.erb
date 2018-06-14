@@ -30,6 +30,8 @@
         <div class="<%= local_assigns[:head] %>">
           <h1><%= local_assigns[:title] %></h1>
           <%= show_subtitle local_assigns[:subtitle] %>
+          <%= show_topic local_assigns[:topic] %>
+          <br>
           <%= show_published_time local_assigns[:created_at] %>
         </div>
       </div>

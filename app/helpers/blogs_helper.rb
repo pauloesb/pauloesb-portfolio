@@ -7,6 +7,10 @@ module BlogsHelper
     content_tag(:h2, subtitle, class: "subheading") unless subtitle.nil?
   end
 
+  def show_topic topic
+    content_tag(:span, topic, class: "meta") unless topic.nil?
+  end
+
   def show_published_time created_at
     content_tag(:span, blog_published_time(created_at), class: "meta") unless created_at.nil?
   end
