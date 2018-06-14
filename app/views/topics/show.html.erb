@@ -1,0 +1,17 @@
+<%= render "shared/blog_nav",
+  img_bg: "blog_bg.jpg",
+  head: "site-heading",
+  title: "Development Diary",
+  subtitle: "Paulo's Dev Blog" %>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 col-md-10 mx-auto infinite-table">
+      <%= @topic.title %>
+    </div>
+    <%= render "shared/blog_sidebar" %>
+  </div>
+  <div class="pagination pgn-style">
+    <%= link_to_next_page(@blogs, 'Load older post...', remote: true, class: 'btn btn-link') %>
+  </div>
+</div>
