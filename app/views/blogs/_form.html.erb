@@ -21,8 +21,8 @@
       Topic.all,
       :id, :title,
       {
-      selected: blog.topic.id,
-      include_blank: true
+        selected: blog_topic_id(blog),
+        include_blank: true
       },
       class: 'form-control') %>
   </div>

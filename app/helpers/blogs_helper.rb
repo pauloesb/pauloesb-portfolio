@@ -37,4 +37,12 @@ module BlogsHelper
   def show_btn blog
     link_to "Show", blog, class: "btn btn-link"
   end
+
+  def blog_topic_id blog
+    if blog.topic
+      blog.topic.id
+    else
+      "1"
+    end
+  end
 end
