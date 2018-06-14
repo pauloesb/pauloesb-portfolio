@@ -13,11 +13,11 @@ class BlogsController < ApplicationController
   end
 
   def show
-    unless logged_in? :site_admin
-      redirect_to blogs_path, notice: "You're not authorized to access this page!"
-    else
+    if (logged_in? :site_admin) || @blog.published?
       @page_title = @blog.title
       @seo_keywords = @blog.body
+    else
+      redirect_to blogs_path, notice: "You're not authorized to access this page!"
     end
   end
 
