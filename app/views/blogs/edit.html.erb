@@ -8,8 +8,10 @@
     <div class="row">
       <div class="col-lg-5 col-md-10 mx-auto">
         <%= render 'form', blog: @blog %>
-        <%= back_btn %>
-        <%= show_btn @blog %>
+        <span class="breadcrumb">
+          <h6 class="breadcrumb-item"><%= blog_back_btn %></h6>
+          <h6 class="breadcrumb-item"><%= blog_show_btn @blog %></h6>
+        </span>
       </div>
       <%= render "shared/blog_sidebar" %>
     </div>
