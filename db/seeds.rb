@@ -1,3 +1,20 @@
+User.create!(
+  email: "admin@portfolio.com",
+  password: "123456",
+  password_confirmation: "123456",
+  name: "Admin User",
+  roles: "site_admin"
+)
+puts "[Input Seed Data] - 1 Admin user created!"
+
+User.create!(
+  email: "user@portfolio.com",
+  password: "123456",
+  password_confirmation: "123456",
+  name: "Regular User"
+)
+puts "[Input Seed Data] - 1 Regular user created!"
+
 3.times do |topic|
   Topic.create!(
     title: "Topic #{topic}"
