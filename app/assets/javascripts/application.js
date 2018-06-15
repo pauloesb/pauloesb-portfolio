@@ -16,8 +16,8 @@
 //= require jquery_ujs
 //= require jquery-ui
 //= require turbolinks
-//= require html5sortable
-//= require bootstrap-filestyle
+//= require lib/html5sortable
+//= require lib/bootstrap-filestyle
 //= require cocoon
 //= require gritter
 //= require data-confirm-modal
