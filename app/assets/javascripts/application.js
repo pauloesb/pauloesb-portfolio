@@ -20,5 +20,7 @@
 //= require lib/bootstrap-filestyle
 //= require cocoon
 //= require gritter
+//= require lib/typed
+//= require typed-implementation
 //= require data-confirm-modal
 //= require_tree .
