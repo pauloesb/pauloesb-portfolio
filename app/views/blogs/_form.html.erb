@@ -32,6 +32,11 @@
     <%= f.text_area :body, class: "form-control", rows: 12, placeholder: "Body" %>
   </div>
 
+  <div class="form-group">
+    <h5>Load <%= f.label :cover_image %></h5>
+    <%= f.file_field :cover_image, class: "filestyle"%>
+  </div>
+
   <hr>
 
   <div class="form-group">
@@ -58,4 +63,8 @@
   <div class="form-group">
     <%= f.submit "Submit", class: "btn btn-primary" %>
   </div>
+
+  <script type="text/javascript">
+$('.filestyle').filestyle();
+  </script>
 <% end %>

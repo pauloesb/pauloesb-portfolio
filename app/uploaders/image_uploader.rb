@@ -1,4 +1,4 @@
-class PortfolioUploader < CarrierWave::Uploader::Base
+class ImageUploader < CarrierWave::Uploader::Base
 
   storage :aws
 
