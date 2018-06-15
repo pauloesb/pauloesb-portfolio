@@ -86,6 +86,7 @@ class BlogsController < ApplicationController
                                  :body,
                                  :status,
                                  :cover_image,
+                                 :remove_cover_image,
                                  :topic_id)
   end
 end

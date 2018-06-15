@@ -37,6 +37,15 @@
     <%= f.file_field :cover_image, class: "filestyle"%>
   </div>
 
+  <div class="form-group">
+    <% if blog.cover_image? %>
+      <label>
+        <%= f.check_box :remove_cover_image %>
+        Remove <%= f.label :cover_image %>
+      </label>
+    <% end %>
+  </div>
+
   <hr>
 
   <div class="form-group">
