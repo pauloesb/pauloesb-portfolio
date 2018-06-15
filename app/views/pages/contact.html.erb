@@ -5,14 +5,39 @@
 
       <hr>
 
-      <div class="row">
-        <div class="col-md-6">
-          <h3>Email</h3>
-          <p><a href="mailto:pauloesb@gmail.com?subject=PortfolioContact" "Email Me">Email me</a></p>
+      <%= form_for(@contact_form, url: send_message_path(@contact_form), html: {method: :post}) do |f| %>
+        <div class="row">
+          <div class="col-md-12">
+            <span>Want to work together? Send me a message and I will get back to you as soon as possible!</span>
+          </div>
+          <hr>
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.text_field :name, placeholder: "Name", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <%= f.email_field :email, autofocus: true, placeholder: "E-mail", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.phone_field :phone, placeholder: "Phone Number", class: "form-control" %>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.text_area :message, placeholder: "Message", class: "form-control", row: 5 %>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <%= f.submit "Send message", class: "btn btn-primary btn-block" %>
+            </div>
+          </div>
         </div>
-        <div class="col-md-6">
-        </div>
-      </div>
+      <% end %>
     </div>
   </div>
 </div>
