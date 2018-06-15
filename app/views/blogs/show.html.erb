@@ -1,5 +1,5 @@
 <%= render "shared/blog_masthead",
-  img_bg: @blog.cover_image,
+  img_bg: (if @blog.cover_image? then @blog.cover_image else nil end),
   head: "post-heading",
   title: @blog.title,
   subtitle: @blog.subtitle,

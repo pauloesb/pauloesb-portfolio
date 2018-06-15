@@ -23,7 +23,11 @@ module BlogsHelper
   end
 
   def img_asset_path img
-    asset_path img unless img.nil?
+    if img.nil?
+      asset_path "blog_bg.jpg"
+    else
+      asset_path img
+    end
   end
 
   def blog_back_btn

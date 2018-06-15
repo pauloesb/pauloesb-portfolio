@@ -6,6 +6,13 @@ ready = ->
     ],
     typeSpeed: 30
     startDelay: 20
+  Typed.new '.portfolio-masthead',
+    strings: [
+      "Welcome to my portfolio. In here I've listed some project's that I've worked on it."
+      "Feel free to take a look, I don't have many projects but what it matters is the quality of development."
+    ],
+    typeSpeed: 30
+    startDelay: 20
   return
 
 $(document).ready ready
