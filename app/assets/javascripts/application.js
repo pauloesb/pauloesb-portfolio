@@ -21,6 +21,7 @@
 //= require cocoon
 //= require gritter
 //= require lib/typed
+//= require lib/blog_nav
 //= require typed-implementation
 //= require data-confirm-modal
 //= require_tree .
