@@ -42,6 +42,10 @@ module BlogsHelper
     link_to "Show", blog, class: "link-item"
   end
 
+  def blog_login_active?
+    false
+  end
+
   def blog_delete_btn blog
     link_to "Delete",
       blog,

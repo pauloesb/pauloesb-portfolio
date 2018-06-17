@@ -1,9 +1,13 @@
 module ApplicationHelper
-  def login_helper style = "", nl = false
-    if current_user.is_a?(GuestUser)
-      login_link(style) +
-        ("<br>".html_safe if nl) +
-        register_link(style)
+  def login_helper style = "", nl = false, active = false
+    if active
+      if current_user.is_a?(GuestUser)
+        login_link(style) +
+          ("<br>".html_safe if nl) +
+          register_link(style)
+      else
+        logout_link(style)
+      end
     else
       logout_link(style)
     end
@@ -18,7 +22,7 @@ module ApplicationHelper
   end
 
   def logout_link style
-    link_to "Logout", destroy_user_session_path, method: :delete, class: style
+    link_to "Logout", destroy_user_session_path, method: :delete, class: style unless current_user.is_a?(GuestUser)
   end
 
   def source_helper
@@ -105,6 +109,6 @@ module ApplicationHelper
   end
 
   def alert_generator msg, title
-      js add_gritter(msg, title: title, sticky: false)
+    js add_gritter(msg, title: title, sticky: false)
   end
 end

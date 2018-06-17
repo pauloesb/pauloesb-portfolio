@@ -8,14 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <%= nav_helper tag_type: 'li', tag_style: 'nav-item', link_style: 'text-white' %>
+        <% if blog_login_active? %>
+          <li class="nav-item">
+            <%= login_link "text-white" if current_user.is_a?(GuestUser)  %>
+          </li>
+          <li class="nav-item">
+            <%= register_link "text-white" if current_user.is_a?(GuestUser) %>
+          </li>
+        <% end %>
         <li class="nav-item">
-          <%= login_link "text-white" if current_user.is_a?(GuestUser)  %>
-        </li>
-        <li class="nav-item">
-          <%= register_link "text-white" if current_user.is_a?(GuestUser) %>
-        </li>
-        <li class="nav-item">
-          <%= logout_link "text-white" unless current_user.is_a?(GuestUser) %>
+          <%= logout_link "text-white" %>
         </li>
       </ul>
     </div>
