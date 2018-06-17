@@ -162,6 +162,9 @@ div.about-me-page > h1 {
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
   background: image-url('home_bg.jpg') no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
 }
 
@@ -190,4 +193,17 @@ div.about-info {
 .skill {
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+.image-bg {
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .video-bg {
+    display: none;
+  }
+  .image-bg {
+    display: block;
+  }
 }

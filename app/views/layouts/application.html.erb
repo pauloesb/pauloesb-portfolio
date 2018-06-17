@@ -19,7 +19,12 @@
   <body class="text-center">
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
 
-      <%= video_background %>
+      <div class="video-bg">
+        <%= video_background %>
+      </div>
+      <div class="image-bg">
+      <%= image_tag "home_bg.jpg", id: "background" %>
+      </div>
 
       <%= render "shared/application_nav" %>
 
