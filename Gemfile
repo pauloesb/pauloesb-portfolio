@@ -33,11 +33,11 @@ gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.2'
 gem 'data-confirm-modal', '~> 1.6', '>= 1.6.2'
 gem 'mail_form', '~> 1.7', '>= 1.7.1'
-gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 
 group :development, :test do
   gem 'byebug', platform: :mri
   gem 'pry-rails'
+  gem 'faker', :git => 'https://github.com/stympy/faker.git', :branch => 'master'
 end
 
 group :development do

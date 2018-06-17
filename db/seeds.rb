@@ -155,7 +155,7 @@ elsif ENV.fetch('RAILS_ENV') == "production"
     Portfolio.create!(
       title: "Portfolio dummy #{porfolio_item}",
       subtitle: "Angular",
-      body: Faker::Lorem.paragraph(2),
+      body: "Portfolio dummy #{portfolio_item}",
       main_image: "http://placehold.it/600x400",
       thumb_image: "http://placehold.it/350x200"
     )
