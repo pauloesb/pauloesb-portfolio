@@ -10,7 +10,7 @@ class BlogsController < ApplicationController
     else
       @blogs = Blog.published.recent.page(params[:page]).per(4)
     end
-    @topics = Topic.all
+    @topics = Topic.with_blogs
     @page_title = "Paulo Borba's Blog"
   end
 
