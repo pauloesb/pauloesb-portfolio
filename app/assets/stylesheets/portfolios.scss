@@ -69,3 +69,17 @@ span.fa-stack > .fa {
 .rem-btn {
   color: red;
 }
+
+.back-btn {
+  float: right !important;
+}
+
+@media screen and (max-width: 400px) {
+  .cp-port {
+    text-align: center !important;
+  }
+  .back-btn {
+    float: none !important;
+    text-align: center!important;
+  }
+}
