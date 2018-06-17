@@ -206,6 +206,9 @@ header.masthead .site-heading {
 }
 
 @media only screen and (min-width: 768px) {
+  #mainNav .navbar-nav > li.nav-item > a {
+    color: black;
+  }
   header.masthead .page-heading,
   header.masthead .post-heading,
   header.masthead .site-heading {
@@ -422,4 +425,10 @@ span.breadcrumb-icons {
 .modal-body {
   font-weight: bold;
   font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media screen and (min-width: 360px) {
+  #mainNav .navbar-nav > li.nav-item > a {
+    color: black !important;
+  }
 }
