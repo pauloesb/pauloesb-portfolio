@@ -429,3 +429,13 @@ span.breadcrumb-icons {
     color: black !important;
   }
 }
+
+.blog-sidebar {
+  display: none;
+}
+
+@media screen and (min-width: 992px) {
+  .blog-sidebar {
+    display: unset;
+  }
+}
