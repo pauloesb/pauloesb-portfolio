@@ -434,8 +434,18 @@ span.breadcrumb-icons {
   display: none;
 }
 
+#social-icons-responsive {
+  visibility: hidden;
+}
+
 @media screen and (min-width: 992px) {
   .blog-sidebar {
     display: unset;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #social-icons-responsive {
+    visibility: visible;
   }
 }
