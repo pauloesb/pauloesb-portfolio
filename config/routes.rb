@@ -2,9 +2,14 @@ Rails.application.routes.draw do
 
   resources :topics, only: [:show]
 
-  devise_for :users, path: '', path_names: { sign_in: 'login',
-                                             sign_out: 'logout',
-                                             sign_up: 'register' }
+  devise_for :users, skip: [:sessions, :registrations, :password]
+
+  as :user do
+    get '/login', to: 'devise/sessions#new', as: :new_user_session
+    post '/login', to: 'devise/sessions#create', as: :user_session
+    delete '/logout', to: 'devise/sessions#destroy', as: :destroy_user_session
+  end
+
   resources :portfolios, except: [:show] do
     put :sort, on: :collection
   end

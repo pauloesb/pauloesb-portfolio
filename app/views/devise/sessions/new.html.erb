@@ -1,7 +1,7 @@
 <div class="login">
   <div class="card">
     <div class="card-body">
-      <h2>Log in</h2>
+      <h2 class="text-center">Log in</h2>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-group">
@@ -22,13 +22,10 @@
         <% end -%>
 
         <div class="form-group">
-          <%= f.submit "Log in", class: "btn btn-primary" %>
+          <%= f.submit "Log in", class: "btn btn-primary btn-block" %>
         </div>
       <% end %>
 
-      <div class="auth-links">
-        <%= render "devise/shared/links" %>
-      </div>
     </div>
   </div>
 </div>
