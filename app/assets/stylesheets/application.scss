@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 @import "gritter";
 
 /*
@@ -206,4 +207,12 @@ div.about-info {
   .image-bg {
     display: block;
   }
+}
+
+.fa.fa-circle {
+  color: black;
+}
+
+.social-icons {
+  margin-left: 10px;
 }
